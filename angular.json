@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "electron-angular-app"
+    }
+  },
+  "defaultProject": "electron-angular-app",
+  "cli": {
+    "analytics": "058c65d1-4014-4141-95b7-5881f2f02d46"
+  }
 }

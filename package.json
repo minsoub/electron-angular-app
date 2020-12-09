@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "electron": "ng build --base-href ./ && tsc --p electron && electron electron/dist/main.js",
+    "pack": "electron-builder"
   },
   "private": true,
   "dependencies": {
@@ -27,10 +29,12 @@
     "@angular-devkit/build-angular": "~0.901.7",
     "@angular/cli": "~9.1.7",
     "@angular/compiler-cli": "~9.1.9",
-    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
+    "electron": "^11.0.4",
+    "electron-builder": "^22.9.1",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~5.0.0",
@@ -42,5 +46,9 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
+  },
+  "build": {
+    "productName": "Electron-Application",
+    "appId": "myApp"
   }
 }
